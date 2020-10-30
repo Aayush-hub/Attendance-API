@@ -13,20 +13,20 @@ root.title("My Attendance Calculator")
 my = Label(text="Attendance Calculator", bg='Green',
             fg='White', font=('comicsansms', 19, 'bold'))
 my.pack()
-f = Frame(root, bg="grey", padx=30, pady=10)
+f = Frame(root, bg="grey", padx=50, pady=50)
 
 my1 = Label(f, text="Enter Username Here")
 my1.pack()
 user1 = StringVar()
 user1.set("")
-screen1 = Entry(f, textvar=user1, font='comicsansms 10 bold')
+screen1 = Entry(f, textvar=user1, font='comicsansms 20 bold')
 screen1.pack(pady=10)
 my2 = Label(f, text="Enter Password Here")
 my2.pack()
 
 user2 = StringVar()
 user2.set("")
-screen2 = Entry(f, textvar=user2, font='comicsansms 10 bold')
+screen2 = Entry(f, textvar=user2, font='comicsansms 20 bold')
 screen2.pack(pady=10)
 
 f.pack(pady=10)
@@ -111,7 +111,7 @@ def att():
     w = screen2.get()
     calc(q,w)
 b = Button(f, text="Enter",command = att)
-b.pack(pady=20)
+b.pack(pady=10)
 
 
 root.mainloop()
