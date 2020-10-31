@@ -2,7 +2,7 @@ import requests
 import re 
 from bs4 import BeautifulSoup
 import time
-from tqdm import tqdm_notebook as tqdm
+from tqdm import tqdm
 
 def calc(username,password):
    
@@ -52,6 +52,7 @@ def calc(username,password):
         Tot_present += res.count('Present')
         Tot_absent += res.count('Absent')
         Tot_attend = round((Tot_present/(Tot_present+Tot_absent))*100,2)
+        time.sleep(1)
     print(' Total Present:',Tot_present,'| Total Absent:',Tot_absent,'\n',f'Total Attendance: {Tot_attend} %')
     
     if Tot_attend < 75:
