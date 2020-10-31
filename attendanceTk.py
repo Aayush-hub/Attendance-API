@@ -2,7 +2,7 @@ import requests
 import re
 from bs4 import BeautifulSoup
 import time
-from tqdm import tqdm_notebook as tqdm
+from tqdm import tqdm
 from tkinter import Tk , Label , Frame ,StringVar , Entry , Button
 
 root = Tk()
@@ -79,7 +79,7 @@ def att():
             Tot_present += res.count('Present')
             Tot_absent += res.count('Absent')
             Tot_attend = round((Tot_present/(Tot_present+Tot_absent))*100, 2)
-            
+            time.sleep(1)
             x = print(' Total Present:',Tot_present,
                       '| Total Absent:',Tot_absent,'\n',
                       f'Total Attendance: {Tot_attend} %')
