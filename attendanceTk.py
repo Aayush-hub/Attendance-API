@@ -80,7 +80,7 @@ def att():
             Tot_absent += res.count('Absent')
             Tot_attend = round((Tot_present/(Tot_present+Tot_absent))*100, 2)
             time.sleep(1)
-            x = print(' Total Present:',Tot_present,
+        j = print(' Total Present:',Tot_present,
                       '| Total Absent:',Tot_absent,'\n',
                       f'Total Attendance: {Tot_attend} %')
     
@@ -103,7 +103,7 @@ def att():
         my3 = Label(text='Result is on Window')
         my3.pack(pady=50)
         result = StringVar()
-        result.set(x)
+        result.set(j)
         # screen_result = Entry(f, textvar=result, font='comicsansms 20 bold')
         # screen_result.pack(pady=10)
         
